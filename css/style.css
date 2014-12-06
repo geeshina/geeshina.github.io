@@ -44,17 +44,19 @@ h1{
 }
 
 h2{
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
   text-align: center;
-  margin: 20px 0 0px;
+  line-height: 1;
+  margin: 25px 0 5px;
   font-weight: normal;
 }
-p{
-  font-size: 16px;
+p.subtitle{
+  font-size: 14px;
   color: #333;
   text-align: center;
-  margin: 0 0 20px;
+  line-height: 1;
+  margin: 0 0 30px;
   font-weight: normal;
 }
 
