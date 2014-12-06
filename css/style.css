@@ -81,11 +81,19 @@ p{
 
 #feeds ul{
   margin: 0;
-  padding-left: 20px;
+  padding: 0 20px;
 }
 
 #feeds ul li{
   list-style-type: none;
+  border-bottom: 1px dotted #ccc;
+  font-size: 14px;
+  line-height: 2.3;
+}
+
+#feeds ul li a:link,
+#feeds ul li a:visited{
+  text-decoration: none;
 }
 
 .navi{
