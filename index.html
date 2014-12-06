@@ -1,1 +1,75 @@
-Hello World
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <title>ギークハウス品川</title>
+</head>
+<body>
+  <div id="wrap">
+    <div class="titleBox">
+      <img class="logo" src="img/logo.png" alt="ギークハウス品川">
+    </div>
+    <h1>ギークハウス品川は、北品川にあるシェアハウスです。</h1>
+      <ul class="navi">
+        <li>活動 / </li>
+        <li>概要 / </li>
+        <li>住人</li>
+        <li></li>
+      </ul>
+    <div class="content">
+      <h2>活動</h2>
+      <p>住人のようす（一部）</p>
+
+      <div class="twitter">
+        <div class="tweet">
+            <a class="twitter-timeline" href="https://twitter.com/sngazm" data-widget-id="541254097144266753">@sngazmさんのツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+          <div class="tweet">
+            <a class="twitter-timeline" href="https://twitter.com/saisa6153" data-widget-id="541255002577072128">@saisa6153さんのツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+          <div class="tweet">
+            <a class="twitter-timeline" href="https://twitter.com/tokisaba" data-widget-id="541255763901939712">@tokisabaさんのツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+          <div class="tweet">
+            <a class="twitter-timeline" href="https://twitter.com/xga" data-widget-id="541271788227792896">@xgaさんのツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        </div>
+        <div id="feeds"></div>
+    </div>
+
+    <div class="content">
+      <h2></h2>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("feeds", "1");
+    google.load("jquery", "1.4.2");
+  </script>
+  <script type="text/javascript" src="js/jquery.jfeedmixer.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    $('#feeds').jFeedMixer({
+      feeds: [
+              'http://blog.sngazm.info/?feed=rss2',
+              'http://saisa.hateblo.jp/rss',
+              'http://webxgohan.sngazm.info/?feed=rss2',
+              'http://futoase.hatenablog.com/rss'
+      ],
+      countPerFeed: 5,
+      countLimit: 10,
+      dateFormat: 'yyyy-mm-dd',
+      categorySeparator: ' | ',
+      nocache: false
+    });
+  });
+  </script>
+</body>
+
+</html>
